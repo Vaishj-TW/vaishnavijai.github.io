@@ -99,24 +99,26 @@
 
     /* ── Hero ── */
     #hero {
-      min-height: 100vh;
+      min-height: 82vh;
       display: flex;
       align-items: center;
-      padding: calc(var(--nav-h) + 40px) 56px 80px;
+      padding: calc(var(--nav-h) + 10px) 56px 40px;
       max-width: var(--max);
       margin: 0 auto;
       gap: 60px;
     }
 
-    .hero-left { flex: 1 1 0; min-width: 0; }
+    .hero-left { flex: 1 1 0; min-width: 0; padding-top: 20px;}
 
     .hero-role {
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 20px;
+  font-family: var(--ff-disp);
+  font-size: clamp(28px, 3vw, 42px);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -.02em;
+  color: var(--text);
+  margin-bottom: 28px;
+  max-width: 700px;
   opacity: 0;
   transform: translateY(16px);
   animation: up .6s cubic-bezier(.22,1,.36,1) forwards .05s;
@@ -143,10 +145,10 @@
     .hero-headline .acc { color: var(--accent); }
 
     .hero-desc {
-      font-size: 17px;
+      font-size: 20px;
       line-height: 1.72;
       color: var(--muted);
-      max-width: 520px;
+      max-width: 620px;
       margin-bottom: 28px;
       opacity: 0;
       transform: translateY(16px);
