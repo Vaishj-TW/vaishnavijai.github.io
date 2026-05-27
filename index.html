@@ -110,6 +110,23 @@
 
     .hero-left { flex: 1 1 0; min-width: 0; }
 
+    .hero-role {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: translateY(16px);
+  animation: up .6s cubic-bezier(.22,1,.36,1) forwards .05s;
+}
+
+.acc-text {
+  color: var(--accent);
+  font-weight: 600;
+}
+
     .hero-headline {
       font-family: var(--ff-disp);
       font-size: clamp(42px, 5.2vw, 72px);
@@ -811,12 +828,12 @@
   <!-- Hero -->
   <section id="hero">
     <div class="hero-left">
-      <h1 class="hero-headline">
-        I write docs that drive adoption, build <span class="acc">AI-augmented workflows,</span> and turn complex systems into <span class="acc">clear guidance.</span>
-      </h1>
+      <p class="hero-role">
+  Sr. Technical Writer & Documentation Engineer
+      </p>
 
       <p class="hero-desc">
-        My USP is building and maintaining high-impact knowledge bases that drive product adoption and reduce customer friction. 5+ years of experience delivering product documentation, onboarding guides, training videos, step-by-step tutorials, and UX copy for enterprise B2B SaaS platforms. I leverage AI-augmented workflows and automation tools to transform manual, technical writing processes into scalable, AI-first systems.
+  My USP is building and maintaining <span class="acc-text">high-impact knowledge bases</span> that drive product adoption and reduce customer friction. <span class="acc-text">5+ years of experience</span> delivering product documentation, onboarding guides, training videos, step-by-step tutorials, and UX copy for enterprise B2B SaaS platforms. I leverage <span class="acc-text">AI-augmented workflows</span> and automation tools to transform manual, technical writing processes into <span class="acc-text">scalable</span>, <span class="acc-text">AI-first systems</span>.
       </p>
 
       <div class="hero-meta">
