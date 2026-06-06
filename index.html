@@ -1454,12 +1454,11 @@
           meta: [
             { l: 'Platform', v: 'Scrut' },
             { l: 'Type', v: 'Workflow Guide' },
-            { l: 'Audience', v: 'Compliance Teams' },
-            { l: 'Status', v: 'Published' }
+            { l: 'Audience', v: 'Compliance teams preparing for an audit' }
           ],
           impact: {
-            h: 'Impact and Context',
-            p: 'This article explained the end-to-end remediation lifecycle and reduced confusion during external audits.'
+            h: 'Challenge',
+            p: 'Customers struggled to understand how audit findings moved from identification to closure. Existing documentation focused on individual actions but lacked a clear end-to-end explanation of responsibilities, status transitions, and reviewer workflows.'
           },
           skills: [
             'Process Documentation',
@@ -1467,20 +1466,48 @@
             'Workflow Design'
           ],
           body: `
-            <h2>Overview</h2>
-            <p>Audit findings move through a structured remediation workflow before closure.</p>
-        
-            <h2>Workflow Stages</h2>
+            <h2>Approach</h2>
+            <p>I created an end-to-end workflow guide that mapped the complete lifecycle of an audit finding within Scrut. The guide was designed to support both first-time users and experienced compliance teams managing large audit programs.</p>
+            <p>Key documentation decisions included:</p>
+            
             <ul>
-              <li>Open</li>
-              <li>Assigned</li>
-              <li>Evidence Submitted</li>
-              <li>Review</li>
-              <li>Closed</li>
+                <li>Structuring the guide around the actual user journey rather than feature navigation.</li>
+                <li>Breaking the process into five clearly defined stages:
+                    <ul>
+                        <li>Create the finding</li>
+                        <li>Remediate and attach evidence</li>
+                        <li>Submit for auditor review</li>
+                        <li>Auditor review and decision-making</li>
+                        <li>Revision cycle and closure</li>
+                    </ul>
+                </li>
+                <li>Defining ownership for every stage to eliminate ambiguity between auditors and assignees.</li>
+                <li>Documenting all possible status transitions and their business meaning.</li>
+                <li>Using screenshots to highlight critical actions such as submitting findings, requesting revisions, and closing findings.</li>
+                <li>Explaining multiple remediation paths, including artifact uploads, linked evidence, and corrective actions.</li>
             </ul>
-        
-            <h2>Best Practices</h2>
-            <p>Attach evidence early and maintain a clear audit trail for reviewers.</p>
+            
+            <h2>Outcome</h2>
+            <p>The article provides a repeatable framework for managing audit findings and enables customers to:</p>
+            
+            <ul>
+                <li>Understand the complete remediation workflow.</li>
+                <li>Reduce delays caused by unclear ownership.</li>
+                <li>Submit audit evidence with greater confidence.</li>
+                <li>Maintain audit readiness through structured review cycles.</li>
+                <li>Improve collaboration between auditors and internal stakeholders.</li>
+            </ul>
+            <div class="article-link-card">
+              <a href="samples/audit-finding-closure-workflow.pdf" target="_blank" rel="noopener">
+            <div class="article-link-icon">
+              📄
+            </div>
+            
+            <div class="article-link-content">
+              <h3>Open Audit Finding Closure Workflow →</h3>
+            </div>            
+              </a>
+            </div>
           `
         },
 
