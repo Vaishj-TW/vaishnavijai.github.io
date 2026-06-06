@@ -1517,32 +1517,55 @@
             meta: [
               { l: 'Platform', v: 'Goldcast' },
               { l: 'Type', v: 'Developer Documentation' },
-              { l: 'Audience', v: 'Developers' },
-              { l: 'Status', v: 'Published' }
+              { l: 'Audience', v: 'Developers & Non-technical admins' }
             ],
             impact: {
-              h: 'Impact and Context',
-              p: 'Provided a self-service guide for developers integrating with Goldcast APIs.'
+              h: 'Challenge',
+              p: 'Developers and administrators integrating Goldcast with external applications required API authentication credentials to access platform endpoints. However, token management involved permission restrictions, security considerations, and irreversible actions that could easily lead to authentication failures or broken integrations. Users needed a simple, secure process for generating, storing, and managing API tokens without requiring support intervention.'
             },
             skills: [
               'API Documentation',
-              'Developer Experience',
+              'Developer Documentation',
               'Authentication'
             ],
             body: `
-              <h2>Overview</h2>
-              <p>API tokens allow secure programmatic access to Goldcast resources.</p>
-          
-              <h2>Create a Token</h2>
-              <ol>
-                <li>Open Developer Settings.</li>
-                <li>Select API Tokens.</li>
-                <li>Generate a new token.</li>
-                <li>Store the token securely.</li>
-              </ol>
-          
-              <h2>Authentication</h2>
-              <p>Pass the generated token in the Authorization header.</p>
+              <h2>Approach</h2>
+              <p>I created a task-focused administrative guide centered around secure token lifecycle management.</p>
+              <p>Key documentation decisions included:</p>
+              
+              <ul>
+                  <li>Starting with a high-level explanation of how API tokens function within Goldcast.</li>
+                  <li>Clearly defining permission requirements and administrator access limitations.</li>
+                  <li>Separating token creation and token deletion into distinct workflows.</li>
+                  <li>Highlighting security-sensitive actions, such as one-time token visibility.</li>
+                  <li>Adding warnings around irreversible token deletion and downstream integration impact.</li>
+                  <li>Using screenshots to guide users through Studio navigation and token generation.</li>
+                  <li>Removing unnecessary technical jargon to make the guide accessible to both technical and non-technical administrators.</li>
+              </ul>
+              
+              <h2>Outcome</h2>
+              <p>The article enables administrators to:</p>
+              
+              <ul>
+                  <li>Generate API credentials without engineering assistance.</li>
+                  <li>Understand token security best practices.</li>
+                  <li>Configure third-party integrations more quickly.</li>
+                  <li>Reduce authentication-related support tickets.</li>
+                  <li>Manage token lifecycles confidently and securely.</li>
+              </ul>
+              
+              <p>The documentation streamlined a critical integration prerequisite and improved self-service onboarding for API users.</p>
+              <div class="article-link-card">
+              <a href="samples/api-token-in-goldcast.pdf" target="_blank" rel="noopener">
+            <div class="article-link-icon">
+              📄
+            </div>
+            
+            <div class="article-link-content">
+              <h3>Open How to Create an API Token in Goldcast →</h3>
+            </div>            
+              </a>
+            </div>
             `
           },
 
