@@ -1328,38 +1328,52 @@
           meta: [
             { l: 'Platform', v: 'Scrut Help Center' },
             { l: 'Type', v: 'Cloud Integration Guide' },
-            { l: 'Audience', v: 'Security Teams' },
-            { l: 'Status', v: 'Published' }
+            { l: 'Target Audience', v: 'GRC Managers' }
           ],
           impact: {
-            h: 'Impact and Context',
-            p: 'One of the most important integrations for cloud security monitoring. This guide helped customers automate evidence collection and cloud asset visibility.'
+            h: 'Challenge',
+            p: 'Enterprise customers integrating AWS with Scrut often struggled with a multi-step setup process involving AWS CloudFormation, IAM roles, permissions, scope configuration, and resource discovery. The integration required users to move between AWS and Scrut while handling technical concepts such as Role ARNs, managed policies, regions, services, and tag-based filtering. The existing guide created support dependency and increased the likelihood of configuration errors during onboarding.'
           },
           skills: [
             'Cloud Security',
             'AWS',
-            'Technical Documentation',
-            'Information Architecture'
+            'Technical Onboarding',
+            'User Journey Mapping'
           ],
           body: `
-            <h2>Overview</h2>
-            <p>This guide explains how to connect AWS accounts to Scrut for continuous monitoring and evidence collection.</p>
-        
-            <h2>Prerequisites</h2>
+            <h2>Approach</h2>
+            <p>I designed a task-oriented integration guide to help administrators complete the setup successfully on their first attempt.</p>
+            <p>Key documentation decisions included:</p>
+            
             <ul>
-              <li>AWS Administrator permissions</li>
-              <li>Scrut Owner access</li>
-              <li>Ability to create IAM roles</li>
+                <li>Leading with business value before configuration steps.</li>
+                <li>Clearly defining prerequisites and permission requirements.</li>
+                <li>Breaking the workflow into three distinct stages:
+                    <ul>
+                        <li>Create the AWS role in AWS.</li>
+                        <li>Connect the AWS account in Scrut.</li>
+                        <li>Configure scanning scope and resource filters.</li>
+                    </ul>
+                </li>
+                <li>Adding screenshots for every critical transition between AWS and Scrut.</li>
+                <li>Including contextual notes, warnings, and best practices to reduce configuration mistakes.</li>
+                <li>Documenting what data Scrut collects, sync frequency, and expected post-integration behavior to improve user confidence.</li>
             </ul>
-        
-            <h2>Configuration Steps</h2>
-            <ol>
-              <li>Create the IAM role.</li>
-              <li>Configure trust policies.</li>
-              <li>Copy the role ARN.</li>
-              <li>Add the role inside Scrut.</li>
-              <li>Validate the connection.</li>
-            </ol>
+            
+            <p>The guide was structured for both first-time administrators and compliance teams managing multiple AWS environments.</p>
+            
+            <h2>Outcome</h2>
+            <p>The article provides a complete end-to-end onboarding workflow that enables customers to:</p>
+            
+            <ul>
+                <li>Connect AWS infrastructure without engineering assistance.</li>
+                <li>Automate compliance evidence collection.</li>
+                <li>Continuously monitor AWS configurations through Scrut.</li>
+                <li>Reduce manual audit preparation effort.</li>
+                <li>Understand how scope selection affects compliance coverage and test results.</li>
+            </ul>
+            
+            <p>The guide became a foundational onboarding resource for customers adopting cloud compliance monitoring within Scrut.</p>
           `
         },
 
