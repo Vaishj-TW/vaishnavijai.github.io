@@ -425,10 +425,10 @@
       background: var(--accent-dim);
     }
 
-    .cards {
+      .cards {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
     }
 
     .card {
@@ -1096,146 +1096,102 @@
       </div>
 
       <div class="cards reveal">
-        
-          <!-- AWS -->
-          <article class="card" data-type="integration" role="button" tabindex="0">
-            <div class="card-thumb">
-              <div class="thumb-icon">☁️</div>
-            </div>
+          <article class="card" data-type="integration" onclick="openModal('aws')" role="button" tabindex="0">
+            <div class="card-thumb"><div class="thumb-icon">☁️</div></div>
             <div class="card-body">
               <div class="card-type">Integration Guide</div>
               <h3 class="card-title">Integrating AWS with Scrut</h3>
-              <p class="card-blurb">
-                Step-by-step guide for connecting AWS infrastructure to Scrut, enabling automated compliance evidence collection, asset discovery, access reviews, and vulnerability monitoring.
-              </p>
-        
+              <p class="card-blurb">Connect AWS accounts to Scrut for automated evidence collection, asset discovery, access reviews, and vulnerability monitoring.</p>
               <div class="card-foot">
                 <div class="ctags">
                   <span class="ctag">AWS</span>
                   <span class="ctag">Cloud Security</span>
-                  <span class="ctag">Compliance</span>
                 </div>
                 <div class="card-arrow">→</div>
               </div>
             </div>
           </article>
-        
-          <!-- Audit Finding -->
-          <article class="card" data-type="workflow" role="button" tabindex="0">
-            <div class="card-thumb">
-              <div class="thumb-icon">📋</div>
-            </div>
+          
+          <article class="card" data-type="workflow" onclick="openModal('audit')" role="button" tabindex="0">
+            <div class="card-thumb"><div class="thumb-icon">📋</div></div>
             <div class="card-body">
-              <div class="card-type">Feature Workflow</div>
-              <h3 class="card-title">Managing Audit Finding Closure in Scrut</h3>
-              <p class="card-blurb">
-                Explains the end-to-end workflow for resolving audit findings, submitting evidence, collaborating with auditors, and tracking remediation activities.
-              </p>
-        
+              <div class="card-type">Workflow Documentation</div>
+              <h3 class="card-title">Managing Audit Finding Closure</h3>
+              <p class="card-blurb">End-to-end audit remediation workflow covering evidence submission, review cycles, and closure.</p>
               <div class="card-foot">
                 <div class="ctags">
                   <span class="ctag">GRC</span>
                   <span class="ctag">Audit</span>
-                  <span class="ctag">Compliance</span>
                 </div>
                 <div class="card-arrow">→</div>
               </div>
             </div>
           </article>
-        
-          <!-- VWO -->
-          <article class="card" data-type="guide" role="button" tabindex="0">
-            <div class="card-thumb">
-              <div class="thumb-icon">⚡</div>
+          
+          <article class="card" data-type="api" onclick="openModal('api')" role="button" tabindex="0">
+            <div class="card-thumb"><div class="thumb-icon">🔑</div></div>
+            <div class="card-body">
+              <div class="card-type">API Documentation</div>
+              <h3 class="card-title">Creating API Tokens in Goldcast</h3>
+              <p class="card-blurb">Developer guide covering token creation, authentication, permissions, and lifecycle management.</p>
+              <div class="card-foot">
+                <div class="ctags">
+                  <span class="ctag">API</span>
+                  <span class="ctag">Auth</span>
+                </div>
+                <div class="card-arrow">→</div>
+              </div>
             </div>
+          </article>
+          
+          <article class="card" data-type="guide" onclick="openModal('vwo')" role="button" tabindex="0">
+            <div class="card-thumb"><div class="thumb-icon">⚡</div></div>
             <div class="card-body">
               <div class="card-type">Technical Explainer</div>
               <h3 class="card-title">Getting Started with VWO SmartCode</h3>
-              <p class="card-blurb">
-                Explains how VWO SmartCode works behind the scenes, including data collection, CDN interactions, DOM rendering, and experimentation workflows.
-              </p>
-        
+              <p class="card-blurb">Explains how SmartCode powers experimentation, data collection, and rendering decisions.</p>
               <div class="card-foot">
                 <div class="ctags">
                   <span class="ctag">JavaScript</span>
                   <span class="ctag">A/B Testing</span>
-                  <span class="ctag">MarTech</span>
                 </div>
                 <div class="card-arrow">→</div>
               </div>
             </div>
           </article>
-        
-          <!-- Goldcast API -->
-          <article class="card" data-type="api" role="button" tabindex="0">
-            <div class="card-thumb">
-              <div class="thumb-icon">🔑</div>
-            </div>
-            <div class="card-body">
-              <div class="card-type">API Documentation</div>
-              <h3 class="card-title">How to Create an API Token in Goldcast</h3>
-              <p class="card-blurb">
-                Technical setup guide covering API token generation, authentication requirements, permissions, and token lifecycle management.
-              </p>
-        
-              <div class="card-foot">
-                <div class="ctags">
-                  <span class="ctag">API</span>
-                  <span class="ctag">Authentication</span>
-                  <span class="ctag">Developer Docs</span>
-                </div>
-                <div class="card-arrow">→</div>
-              </div>
-            </div>
-          </article>
-        
-          <!-- Vanity URLs -->
-          <article class="card" data-type="guide" role="button" tabindex="0">
-            <div class="card-thumb">
-              <div class="thumb-icon">🔗</div>
-            </div>
+          
+          <article class="card" data-type="guide" onclick="openModal('vanity')" role="button" tabindex="0">
+            <div class="card-thumb"><div class="thumb-icon">🔗</div></div>
             <div class="card-body">
               <div class="card-type">Configuration Guide</div>
-              <h3 class="card-title">Setting Up Vanity URLs for Events</h3>
-              <p class="card-blurb">
-                Explains custom event URLs, DNS configuration, SSL requirements, and branding considerations for event marketing teams.
-              </p>
-        
+              <h3 class="card-title">Setting Up Vanity URLs</h3>
+              <p class="card-blurb">DNS, SSL, and branding configuration guide for custom event URLs.</p>
               <div class="card-foot">
                 <div class="ctags">
                   <span class="ctag">DNS</span>
                   <span class="ctag">Branding</span>
-                  <span class="ctag">Events</span>
                 </div>
                 <div class="card-arrow">→</div>
               </div>
             </div>
           </article>
-        
-          <!-- Sales Article -->
-          <article class="card" data-type="content" role="button" tabindex="0">
-            <div class="card-thumb">
-              <div class="thumb-icon">💬</div>
-            </div>
+          
+          <article class="card" data-type="content" onclick="openModal('sales')" role="button" tabindex="0">
+            <div class="card-thumb"><div class="thumb-icon">💬</div></div>
             <div class="card-body">
               <div class="card-type">Long-form Content</div>
-              <h3 class="card-title">5 Most Critical Questions to Ask on a Sales Discovery Call</h3>
-              <p class="card-blurb">
-                Thought-leadership article helping sales teams uncover buyer pain points, improve discovery conversations, and guide prospects through the purchasing journey.
-              </p>
-        
+              <h3 class="card-title">Sales Discovery Questions</h3>
+              <p class="card-blurb">Thought leadership content helping sales teams improve discovery conversations.</p>
               <div class="card-foot">
                 <div class="ctags">
                   <span class="ctag">Sales</span>
-                  <span class="ctag">SaaS</span>
-                  <span class="ctag">Content Marketing</span>
+                  <span class="ctag">Content</span>
                 </div>
                 <div class="card-arrow">→</div>
               </div>
             </div>
           </article>
-        
-        </div>
+      </div>
   </section>
 
   <!-- Resume -->
@@ -1341,187 +1297,218 @@
 
     /* Articles */
     const ARTICLES = {
-      okta: {
-        tag: 'Integration Setup Guide',
-        title: 'Connecting Okta to Scrut via SAML 2.0',
-        meta: [
-          { l: 'Platform',  v: 'Scrut Help Center' },
-          { l: 'Type',      v: 'Integration Documentation' },
-          { l: 'Audience',  v: 'IT Admins and Security Leads' },
-          { l: 'Status',    v: 'Published' }
-        ],
-        impact: {
-          h: 'Impact and Context',
-          p: 'SSO integration guides were consistently among the top-requested articles at Scrut. This guide reduced Okta-related onboarding support tickets by giving IT admins a clear, end-to-end walkthrough they could follow independently. It also standardized the SAML attribute mapping table format adopted across all subsequent identity provider guides.'
+      aws: {
+          tag: 'Integration Documentation',
+          title: 'Integrating AWS with Scrut',
+          meta: [
+            { l: 'Platform', v: 'Scrut Help Center' },
+            { l: 'Type', v: 'Cloud Integration Guide' },
+            { l: 'Audience', v: 'Security Teams' },
+            { l: 'Status', v: 'Published' }
+          ],
+          impact: {
+            h: 'Impact and Context',
+            p: 'One of the most important integrations for cloud security monitoring. This guide helped customers automate evidence collection and cloud asset visibility.'
+          },
+          skills: [
+            'Cloud Security',
+            'AWS',
+            'Technical Documentation',
+            'Information Architecture'
+          ],
+          body: `
+            <h2>Overview</h2>
+            <p>This guide explains how to connect AWS accounts to Scrut for continuous monitoring and evidence collection.</p>
+        
+            <h2>Prerequisites</h2>
+            <ul>
+              <li>AWS Administrator permissions</li>
+              <li>Scrut Owner access</li>
+              <li>Ability to create IAM roles</li>
+            </ul>
+        
+            <h2>Configuration Steps</h2>
+            <ol>
+              <li>Create the IAM role.</li>
+              <li>Configure trust policies.</li>
+              <li>Copy the role ARN.</li>
+              <li>Add the role inside Scrut.</li>
+              <li>Validate the connection.</li>
+            </ol>
+          `
         },
-        skills: ['Information Architecture', 'SAML / SSO Concepts', 'Technical Documentation', 'Cross-functional Collaboration', 'Troubleshooting Writing'],
-        body: `
-          <div class="callout"><p>📌 <strong>Before you begin:</strong> You need an Okta account with Super Administrator access and a Scrut account with Owner-level permissions to complete this setup.</p></div>
-          <h2>Overview</h2>
-          <p>Integrating Okta with Scrut using SAML 2.0 allows your team members to sign in to Scrut using their existing Okta credentials. Once configured, you can manage access to Scrut directly from Okta, provision and deprovision users, and enforce your organization's authentication policies across the platform.</p>
-          <h2>Prerequisites</h2>
-          <ul>
-            <li>Okta account with <strong>Super Administrator</strong> or <strong>Organization Administrator</strong> role</li>
-            <li>Scrut account with <strong>Owner</strong> role</li>
-            <li>Your organization's Scrut subdomain (e.g., <code>yourorg.scrut.io</code>)</li>
-          </ul>
-          <h2>Step 1 — Create a SAML App in Okta</h2>
-          <ol>
-            <li>In Okta, navigate to <strong>Applications &gt; Applications</strong>.</li>
-            <li>Click <strong>Create App Integration</strong>.</li>
-            <li>Select <strong>SAML 2.0</strong> as the sign-on method, then click <strong>Next</strong>.</li>
-            <li>In the <strong>App name</strong> field, enter <code>Scrut</code>. Click <strong>Next</strong>.</li>
-          </ol>
-          <h2>Step 2 — Configure SAML Settings</h2>
-          <p>On the <strong>Configure SAML</strong> tab, enter the following values:</p>
-          <table>
-            <thead><tr><th>Field</th><th>Value</th></tr></thead>
-            <tbody>
-              <tr><td>Single sign-on URL</td><td><code>https://app.scrut.io/sso/saml/callback</code></td></tr>
-              <tr><td>Audience URI (SP Entity ID)</td><td><code>https://app.scrut.io</code></td></tr>
-              <tr><td>Name ID format</td><td>EmailAddress</td></tr>
-              <tr><td>Application username</td><td>Email</td></tr>
-            </tbody>
-          </table>
-          <h2>Step 3 — Map SAML Attributes</h2>
-          <p>Under <strong>Attribute Statements</strong>, add the following mappings:</p>
-          <table>
-            <thead><tr><th>Name</th><th>Name format</th><th>Value</th></tr></thead>
-            <tbody>
-              <tr><td>email</td><td>Unspecified</td><td>user.email</td></tr>
-              <tr><td>firstName</td><td>Unspecified</td><td>user.firstName</td></tr>
-              <tr><td>lastName</td><td>Unspecified</td><td>user.lastName</td></tr>
-            </tbody>
-          </table>
-          <p>Click <strong>Next</strong>, then <strong>Finish</strong>.</p>
-          <h2>Step 4 — Copy the IdP Metadata</h2>
-          <p>On the <strong>Sign On</strong> tab of your new Scrut app in Okta, click <strong>View SAML setup instructions</strong>. Copy the following:</p>
-          <ul>
-            <li><strong>Identity Provider Single Sign-On URL</strong></li>
-            <li><strong>Identity Provider Issuer</strong></li>
-            <li><strong>X.509 Certificate</strong></li>
-          </ul>
-          <h2>Step 5 — Configure SSO in Scrut</h2>
-          <ol>
-            <li>In Scrut, go to <strong>Settings &gt; Security &gt; Single Sign-On</strong>.</li>
-            <li>Click <strong>Configure SSO</strong> and select <strong>SAML 2.0</strong>.</li>
-            <li>Paste the values from Step 4 into the corresponding fields.</li>
-            <li>Click <strong>Save Configuration</strong>.</li>
-          </ol>
-          <h2>Step 6 — Test the Connection</h2>
-          <p>Before enforcing SSO for all users, test the connection with your own account:</p>
-          <ol>
-            <li>Open a private browsing window.</li>
-            <li>Navigate to your Scrut login page and click <strong>Sign in with SSO</strong>.</li>
-            <li>You should be redirected to Okta and back to Scrut without entering a password.</li>
-          </ol>
-          <div class="callout"><p>✅ <strong>Tip:</strong> Only enforce SSO after at least one successful test. Enforcing SSO prematurely can lock users out of their accounts.</p></div>
-          <h2>Troubleshooting</h2>
-          <table>
-            <thead><tr><th>Error</th><th>Likely cause</th><th>Fix</th></tr></thead>
-            <tbody>
-              <tr><td>Invalid SAML response</td><td>Attribute mapping mismatch</td><td>Verify the <code>email</code> attribute maps to <code>user.email</code> in Okta</td></tr>
-              <tr><td>Certificate expired</td><td>Okta cert rotated</td><td>Download the new certificate from Okta and re-upload it in Scrut SSO settings</td></tr>
-              <tr><td>Redirect loop</td><td>Incorrect ACS URL</td><td>Confirm the Single Sign-On URL is exactly <code>https://app.scrut.io/sso/saml/callback</code></td></tr>
-            </tbody>
-          </table>
-        `
-      },
-      release: {
-        tag: 'Release Notes',
-        title: 'Evidence Automation — Q1 2025 Update',
-        meta: [
-          { l: 'Platform', v: 'Scrut Product Updates' },
-          { l: 'Type',     v: 'Customer-Facing Release Notes' },
-          { l: 'Audience', v: 'Compliance Managers and Security Teams' },
-          { l: 'Release',  v: 'March 2025' }
-        ],
-        impact: {
-          h: 'Impact and Context',
-          p: 'These release notes covered a major overhaul of Scrut\'s flagship Evidence Automation feature. The notes were distributed via in-product banners, email campaigns, and the Help Center. Writing for a mixed audience of technical and non-technical compliance professionals required balancing specificity with accessibility. Plain-language summaries were added above each technical change so compliance managers could quickly assess impact.'
+
+      audit: {
+          tag: 'Workflow Documentation',
+          title: 'Managing Audit Finding Closure',
+          meta: [
+            { l: 'Platform', v: 'Scrut' },
+            { l: 'Type', v: 'Workflow Guide' },
+            { l: 'Audience', v: 'Compliance Teams' },
+            { l: 'Status', v: 'Published' }
+          ],
+          impact: {
+            h: 'Impact and Context',
+            p: 'This article explained the end-to-end remediation lifecycle and reduced confusion during external audits.'
+          },
+          skills: [
+            'Process Documentation',
+            'Compliance Writing',
+            'Workflow Design'
+          ],
+          body: `
+            <h2>Overview</h2>
+            <p>Audit findings move through a structured remediation workflow before closure.</p>
+        
+            <h2>Workflow Stages</h2>
+            <ul>
+              <li>Open</li>
+              <li>Assigned</li>
+              <li>Evidence Submitted</li>
+              <li>Review</li>
+              <li>Closed</li>
+            </ul>
+        
+            <h2>Best Practices</h2>
+            <p>Attach evidence early and maintain a clear audit trail for reviewers.</p>
+          `
         },
-        skills: ['Release Notes', 'Product Communication', 'GRC Domain Knowledge', 'Tone and Voice', 'Audience Analysis'],
-        body: `
-          <p style="font-size:12.5px;color:var(--light);margin-bottom:24px">Scrut Help Center &nbsp;·&nbsp; March 2025 &nbsp;·&nbsp; Evidence Automation</p>
-          <h2>What's New</h2>
-          <h3><span class="badge badge-new">New</span> Automated evidence collection for 45+ integrations</h3>
-          <p>Scrut now automatically collects evidence from 45+ integrations, including AWS, GCP, Azure, GitHub, Okta, and Google Workspace. Once an integration is connected, Scrut pulls evidence on your configured schedule with no manual uploads required.</p>
-          <h3><span class="badge badge-new">New</span> Automation Coverage score</h3>
-          <p>Your compliance dashboard now shows an <strong>Automation Coverage</strong> score: the percentage of required evidences that are fully or partially automated. Use this score to identify which controls still rely on manual evidence and prioritize integration setup accordingly.</p>
-          <h3><span class="badge badge-new">New</span> Evidence collection scheduling</h3>
-          <p>Configure how frequently Scrut collects evidence from each integration: <strong>Daily</strong>, <strong>Weekly</strong>, or <strong>Monthly</strong>. Scheduling is configurable per integration from <strong>Settings &gt; Integrations</strong>.</p>
-          <h3><span class="badge badge-new">New</span> Evidence history and audit trail</h3>
-          <p>Each automated evidence item now includes a full collection history with timestamps, collection method, and the integration that sourced it. This significantly strengthens your audit trail for ISO 27001 and SOC 2 reviews.</p>
-          <h2>Improvements</h2>
-          <h3><span class="badge badge-imp">Improved</span> Faster sync for large workspaces</h3>
-          <p>Evidence collection for organizations with 500+ controls has been re-architected to run in parallel. Most workspaces will see collection times drop by 60 to 70 percent.</p>
-          <h3><span class="badge badge-imp">Improved</span> Clearer evidence status indicators</h3>
-          <p>Evidence status now uses clearer labels: <strong>Automated</strong>, <strong>Partially Automated</strong>, <strong>Manual</strong>, and <strong>Overdue</strong>. Hover over any status badge to see the last collection timestamp and source.</p>
-          <h2>Bug Fixes</h2>
-          <h3><span class="badge badge-fix">Fixed</span> AWS CloudTrail sync failures</h3>
-          <p>Resolved an issue where CloudTrail evidence occasionally failed to sync for accounts in <code>ap-south-1</code> and <code>eu-west-2</code> regions. Re-trigger a manual sync from integration settings to backfill missing data.</p>
-          <h3><span class="badge badge-fix">Fixed</span> Duplicate evidence entries on reconnection</h3>
-          <p>Fixed a bug where disconnecting and reconnecting an integration created duplicate evidence entries. Evidence history is now preserved correctly on reconnection.</p>
-          <h2>A Note on Custom Integrations</h2>
-          <div class="callout"><p>⚠️ <strong>Heads up:</strong> If you use the Scrut API to push evidence programmatically, the evidence schema has been updated. The <code>collectionMethod</code> field is now required. Existing integrations using the old schema will continue to work until June 30, 2025. See the updated API reference for migration details.</p></div>
-        `
-      },
-      coverage: {
-        tag: 'Feature Help Article',
-        title: 'How Automation Coverage Works',
-        meta: [
-          { l: 'Platform',   v: 'Scrut Help Center' },
-          { l: 'Type',       v: 'Feature Guide' },
-          { l: 'Audience',   v: 'Compliance Managers' },
-          { l: 'Frameworks', v: 'ISO 27001, SOC 2, GDPR' }
-        ],
-        impact: {
-          h: 'Impact and Context',
-          p: 'Automation Coverage was one of the most frequently misunderstood metrics by new Scrut customers. Support was fielding the same three or four questions repeatedly. This article was written proactively to give compliance managers a definitive reference. It became the second most-viewed Help Center article within two weeks of publication and is now linked directly from the in-product coverage dashboard tooltip.'
+
+      api: {
+            tag: 'API Documentation',
+            title: 'Creating API Tokens in Goldcast',
+            meta: [
+              { l: 'Platform', v: 'Goldcast' },
+              { l: 'Type', v: 'Developer Documentation' },
+              { l: 'Audience', v: 'Developers' },
+              { l: 'Status', v: 'Published' }
+            ],
+            impact: {
+              h: 'Impact and Context',
+              p: 'Provided a self-service guide for developers integrating with Goldcast APIs.'
+            },
+            skills: [
+              'API Documentation',
+              'Developer Experience',
+              'Authentication'
+            ],
+            body: `
+              <h2>Overview</h2>
+              <p>API tokens allow secure programmatic access to Goldcast resources.</p>
+          
+              <h2>Create a Token</h2>
+              <ol>
+                <li>Open Developer Settings.</li>
+                <li>Select API Tokens.</li>
+                <li>Generate a new token.</li>
+                <li>Store the token securely.</li>
+              </ol>
+          
+              <h2>Authentication</h2>
+              <p>Pass the generated token in the Authorization header.</p>
+            `
+          },
+
+      vwo: {
+          tag: 'Technical Explainer',
+          title: 'Getting Started with VWO SmartCode',
+          meta: [
+            { l: 'Platform', v: 'VWO' },
+            { l: 'Type', v: 'Technical Guide' },
+            { l: 'Audience', v: 'Marketers & Developers' },
+            { l: 'Status', v: 'Published' }
+          ],
+          impact: {
+            h: 'Impact and Context',
+            p: 'Helped customers understand how SmartCode powers experimentation and personalization.'
+          },
+          skills: [
+            'Technical Writing',
+            'JavaScript Concepts',
+            'User Education'
+          ],
+          body: `
+            <h2>Overview</h2>
+            <p>SmartCode is the JavaScript snippet that enables VWO experiments.</p>
+        
+            <h2>How It Works</h2>
+            <p>The script loads before page rendering and determines which variation a visitor should see.</p>
+        
+            <h2>Benefits</h2>
+            <ul>
+              <li>A/B testing</li>
+              <li>Personalization</li>
+              <li>Visitor targeting</li>
+            </ul>
+          `
         },
-        skills: ['Feature Documentation', 'Information Architecture', 'User Empathy', 'Compliance Domain Knowledge', 'FAQ Writing'],
-        body: `
-          <h2>What is Automation Coverage?</h2>
-          <p>Automation Coverage is a metric that tells you what percentage of the evidence required for your active compliance frameworks is being collected automatically by Scrut.</p>
-          <p>A higher score means less manual work for your team and a more audit-ready posture. Most organizations target 70% or higher before an external audit.</p>
-          <h2>How the score is calculated</h2>
-          <div class="callout"><p><strong>Automation Coverage % = (Fully Automated + Partially Automated evidences) / Total Required Evidences x 100</strong></p></div>
-          <table>
-            <thead><tr><th>Evidence Status</th><th>Counts Toward Score?</th><th>Description</th></tr></thead>
-            <tbody>
-              <tr><td><strong>Fully Automated</strong></td><td>Yes</td><td>Collected entirely by a connected integration on a schedule</td></tr>
-              <tr><td><strong>Partially Automated</strong></td><td>Yes</td><td>Some items collected automatically; others require manual upload</td></tr>
-              <tr><td><strong>Manual</strong></td><td>No</td><td>Requires manual upload every review cycle</td></tr>
-              <tr><td><strong>Not Applicable</strong></td><td>Excluded</td><td>Excluded from the denominator entirely</td></tr>
-              <tr><td><strong>Overdue</strong></td><td>No</td><td>Automated collection failed or has not run recently</td></tr>
-            </tbody>
-          </table>
-          <h2>What evidence types can be automated?</h2>
-          <p>Evidence that can be automated typically comes from integrations your organization already uses. Common automated evidence types include:</p>
-          <ul>
-            <li><strong>Access logs</strong> from identity providers (Okta, Azure AD, Google Workspace)</li>
-            <li><strong>Cloud configuration snapshots</strong> from AWS, GCP, or Azure</li>
-            <li><strong>Code repository activity</strong> from GitHub or GitLab</li>
-            <li><strong>HR records</strong> via HRIS integrations like BambooHR or Workday</li>
-            <li><strong>Policy acknowledgments</strong> from Scrut's built-in Policies module</li>
-            <li><strong>Training completion records</strong> from Scrut's Training Campaigns</li>
-          </ul>
-          <h2>How to improve your score</h2>
-          <ol>
-            <li>Go to <strong>Dashboard &gt; Automation Coverage</strong> and click <strong>View gaps</strong>.</li>
-            <li>Scrut shows which controls have Manual or Overdue evidence, and which integrations would automate them.</li>
-            <li>Click <strong>Connect integration</strong> next to any recommendation to begin setup.</li>
-          </ol>
-          <div class="callout"><p>💡 <strong>Tip:</strong> Start with your identity provider (Okta, Azure AD, or Google Workspace). IAM controls typically represent 20 to 30 percent of required evidence in ISO 27001 and SOC 2 frameworks.</p></div>
-          <h2>Frequently Asked Questions</h2>
-          <h3>Does the score reset when I add a new framework?</h3>
-          <p>Adding a new framework increases the denominator, which may lower your score temporarily. This is expected. Connected integrations will begin collecting evidence for the new framework's controls right away.</p>
-          <h3>Is a score of 100% possible?</h3>
-          <p>For most frameworks, yes. Some controls require human judgment or physical evidence (signed contracts, data center access logs) that cannot be automated. Scrut marks these as <strong>Not Applicable</strong> and excludes them from your score.</p>
-          <h3>How is this different from Scrut Monitors?</h3>
-          <p>Scrut Monitors run continuous automated tests against your infrastructure to detect misconfigurations. Evidence Automation collects documentary evidence for your compliance controls on a schedule. The two work together: a failing Monitor can flag a gap, and automated evidence collection documents the remediation for your audit trail.</p>
-        `
-      }
+
+      vanity: {
+          tag: 'Configuration Guide',
+          title: 'Setting Up Vanity URLs',
+          meta: [
+            { l: 'Platform', v: 'Goldcast' },
+            { l: 'Type', v: 'Configuration Documentation' },
+            { l: 'Audience', v: 'Event Admins' },
+            { l: 'Status', v: 'Published' }
+          ],
+          impact: {
+            h: 'Impact and Context',
+            p: 'This guide helped customers configure branded event URLs without engineering support.'
+          },
+          skills: [
+            'DNS',
+            'Customer Education',
+            'Technical Documentation'
+          ],
+          body: `
+            <h2>Overview</h2>
+            <p>Vanity URLs allow events to use branded domains instead of default platform URLs.</p>
+        
+            <h2>Setup Process</h2>
+            <ol>
+              <li>Create DNS records.</li>
+              <li>Verify ownership.</li>
+              <li>Configure SSL.</li>
+              <li>Publish changes.</li>
+            </ol>
+          `
+        },
+
+      sales: {
+          tag: 'Long-form Content',
+          title: 'Sales Discovery Questions',
+          meta: [
+            { l: 'Platform', v: 'CopyPress' },
+            { l: 'Type', v: 'Thought Leadership' },
+            { l: 'Audience', v: 'Sales Leaders' },
+            { l: 'Status', v: 'Published' }
+          ],
+          impact: {
+            h: 'Impact and Context',
+            p: 'A long-form article designed to help sales teams improve qualification and discovery conversations.'
+          },
+          skills: [
+            'Content Strategy',
+            'Research',
+            'Long-form Writing'
+          ],
+          body: `
+            <h2>Overview</h2>
+            <p>Discovery conversations determine whether sales opportunities progress or stall.</p>
+        
+            <h2>Key Questions</h2>
+            <ul>
+              <li>What problem are you solving?</li>
+              <li>Why now?</li>
+              <li>Who owns the decision?</li>
+              <li>What happens if nothing changes?</li>
+            </ul>
+        
+            <h2>Outcome</h2>
+            <p>These questions uncover urgency, business impact, and buying intent.</p>
+          `
+        }
     };
 
     function openModal(id) {
