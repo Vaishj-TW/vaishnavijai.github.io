@@ -1511,17 +1511,49 @@
         }
     };
 
-    function openModal(id) {
+  function openModal(id) {
+      console.log('1. clicked', id);
+    
       const a = ARTICLES[id];
-      if (!a) return;
+      console.log('2. article', a);
+    
+      if (!a) {
+        console.log('3. article not found');
+        return;
+      }
+    
+      console.log('4. setting tag');
       document.getElementById('mTag').textContent = a.tag;
+    
+      console.log('5. setting title');
       document.getElementById('mTitle').textContent = a.title;
-      document.getElementById('mMeta').innerHTML = a.meta.map(m => `<div class="mm"><strong>${m.l}</strong><span>${m.v}</span></div>`).join('');
-      document.getElementById('mImpact').innerHTML = `<h4>${a.impact.h}</h4><p>${a.impact.p}</p>`;
-      document.getElementById('mSkills').innerHTML = a.skills.map(s => `<span class="m-skill">${s}</span>`).join('');
+    
+      console.log('6. setting meta');
+      document.getElementById('mMeta').innerHTML =
+        a.meta.map(m =>
+          `<div class="mm"><strong>${m.l}</strong><span>${m.v}</span></div>`
+        ).join('');
+    
+      console.log('7. setting impact');
+      document.getElementById('mImpact').innerHTML =
+        `<h4>${a.impact.h}</h4><p>${a.impact.p}</p>`;
+    
+      console.log('8. setting skills');
+      document.getElementById('mSkills').innerHTML =
+        a.skills.map(s =>
+          `<span class="m-skill">${s}</span>`
+        ).join('');
+    
+      console.log('9. setting body');
       document.getElementById('mBody').innerHTML = a.body;
+    
+      console.log('10. opening modal');
+    
       const ov = document.getElementById('overlay');
       ov.classList.add('open');
+    
+      console.log('11. opened');
+    
       ov.scrollTop = 0;
       document.body.style.overflow = 'hidden';
     }
