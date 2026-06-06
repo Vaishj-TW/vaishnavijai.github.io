@@ -1575,31 +1575,57 @@
           meta: [
             { l: 'Platform', v: 'VWO' },
             { l: 'Type', v: 'Technical Guide' },
-            { l: 'Audience', v: 'Marketers & Developers' },
-            { l: 'Status', v: 'Published' }
+            { l: 'Audience', v: 'Marketers & Developers' }
           ],
           impact: {
-            h: 'Impact and Context',
-            p: 'Helped customers understand how SmartCode powers experimentation and personalization.'
+            h: 'Challenge',
+            p: 'Implementing VWO SmartCode requires users to understand both installation requirements and the underlying mechanics of how experimentation and personalization are delivered on a website. Many users could complete installation steps but lacked confidence in how SmartCode interacted with their website, raising concerns about performance, SEO, security, and implementation correctness.'
           },
           skills: [
-            'Technical Writing',
+            'Concept Simplification',
             'JavaScript Concepts',
             'User Education'
           ],
           body: `
-            <h2>Overview</h2>
-            <p>SmartCode is the JavaScript snippet that enables VWO experiments.</p>
-        
-            <h2>How It Works</h2>
-            <p>The script loads before page rendering and determines which variation a visitor should see.</p>
-        
-            <h2>Benefits</h2>
+            <h2>Approach</h2>
+            <p>I designed an onboarding guide that combined conceptual education with implementation guidance.</p>
+            <p>Key documentation decisions included:</p>
+            
             <ul>
-              <li>A/B testing</li>
-              <li>Personalization</li>
-              <li>Visitor targeting</li>
+                <li>Introducing SmartCode through its business purpose rather than technical implementation details.</li>
+                <li>Explaining how SmartCode communicates with VWO servers using simplified workflows and diagrams.</li>
+                <li>Breaking down the SmartCode execution process into sequential stages.</li>
+                <li>Using visual process flows to explain server requests, test delivery, and page rendering.</li>
+                <li>Comparing synchronous and asynchronous SmartCode implementations through side-by-side explanations.</li>
+                <li>Providing installation instructions for different website architectures.</li>
+                <li>Addressing common implementation concerns through FAQs covering SEO, analytics compatibility, privacy, and troubleshooting.</li>
             </ul>
+            
+            <p>The guide was designed to reduce onboarding friction while improving user confidence in deployment decisions.</p>
+            
+            <h2>Outcome</h2>
+            <p>The article enables customers to:</p>
+            
+            <ul>
+                <li>Understand how SmartCode powers experimentation and personalization.</li>
+                <li>Implement tracking correctly across their websites.</li>
+                <li>Choose the appropriate SmartCode configuration.</li>
+                <li>Reduce implementation errors during onboarding.</li>
+                <li>Address stakeholder concerns regarding performance and SEO.</li>
+            </ul>
+            
+            <p>The documentation serves as a foundational onboarding resource for new VWO customers implementing experimentation infrastructure.</p>
+            <div class="article-link-card">
+              <a href="samples/getting-started-with-vwo-smart-code.pdf" target="_blank" rel="noopener">
+            <div class="article-link-icon">
+              📄
+            </div>
+            
+            <div class="article-link-content">
+              <h3> Getting Started with VWO SmartCode →</h3>
+            </div>            
+              </a>
+            </div>
           `
         },
 
@@ -1609,64 +1635,120 @@
           meta: [
             { l: 'Platform', v: 'Goldcast' },
             { l: 'Type', v: 'Configuration Documentation' },
-            { l: 'Audience', v: 'Event Admins' },
-            { l: 'Status', v: 'Published' }
+            { l: 'Audience', v: 'Event Admins' }
           ],
           impact: {
-            h: 'Impact and Context',
-            p: 'This guide helped customers configure branded event URLs without engineering support.'
+            h: 'Challenge',
+            p: 'Customers wanted branded event experiences that aligned with their corporate domains rather than using standard Goldcast URLs. However, configuring vanity URLs required understanding DNS records, SSL certificates, subdomain limitations, URL structures, and coordination with support teams. The setup process involved both marketing and technical stakeholders, making documentation clarity critical for successful implementation without engineering intervention.'
           },
           skills: [
             'DNS',
             'Customer Education',
-            'Technical Documentation'
+            'B2B SaaS',
+            'Infrastructure Documentation'
           ],
           body: `
-            <h2>Overview</h2>
-            <p>Vanity URLs allow events to use branded domains instead of default platform URLs.</p>
-        
-            <h2>Setup Process</h2>
-            <ol>
-              <li>Create DNS records.</li>
-              <li>Verify ownership.</li>
-              <li>Configure SSL.</li>
-              <li>Publish changes.</li>
-            </ol>
+            <h2>Approach</h2>
+            <p>I developed a comprehensive implementation guide covering both business and technical aspects of vanity URL configuration.</p>
+            <p>Key documentation decisions included:</p>
+            
+            <ul>
+                <li>Leading with the branding and marketing benefits of vanity URLs.</li>
+                <li>Explaining the difference between standard Goldcast URLs and custom branded domains.</li>
+                <li>Comparing organization-level and asset-level configurations through structured examples.</li>
+                <li>Documenting setup limitations and technical constraints before implementation.</li>
+                <li>Providing clear instructions for submitting vanity URL requests.</li>
+                <li>Explaining DNS record configuration and SSL certificate requirements.</li>
+                <li>Including real-world URL examples to help customers visualize configuration outcomes.</li>
+                <li>Organizing the content to support both marketers and technical administrators.</li>
+            </ul>
+            
+            <p>The guide bridged the gap between branding requirements and infrastructure configuration.</p>
+            
+            <h2>Outcome</h2>
+            <p>The article enables customers to:</p>
+            
+            <ul>
+                <li>Launch branded event experiences using their own domains.</li>
+                <li>Understand available URL customization options.</li>
+                <li>Successfully complete DNS and SSL configuration requirements.</li>
+                <li>Reduce delays during event setup.</li>
+                <li>Improve brand consistency across event registration and event experiences.</li>
+            </ul>
+            
+            <p>The documentation became a critical resource for customers implementing event branding capabilities.</p>
+            <div class="article-link-card">
+              <a href="samples/setting-up-vanity-links.pdf" target="_blank" rel="noopener">
+            <div class="article-link-icon">
+              📄
+            </div>
+            
+            <div class="article-link-content">
+              <h3> Setting Up Vanity Links for an Online Event →</h3>
+            </div>            
+              </a>
+            </div>
           `
         },
 
       sales: {
-          tag: 'Long-form Content',
+          tag: 'Marketing Content',
           title: 'Sales Discovery Questions',
           meta: [
             { l: 'Platform', v: 'CopyPress' },
             { l: 'Type', v: 'Thought Leadership' },
-            { l: 'Audience', v: 'Sales Leaders' },
-            { l: 'Status', v: 'Published' }
+            { l: 'Audience', v: 'Sales Leaders' }
           ],
           impact: {
-            h: 'Impact and Context',
-            p: 'A long-form article designed to help sales teams improve qualification and discovery conversations.'
+            h: 'Challenge',
+            p: 'Sales professionals often invest significant effort into perfecting product pitches while spending insufficient time understanding customer pain points, business goals, and buying motivations. As a result, discovery conversations frequently become product-centric rather than customer-centric, reducing qualification quality and weakening sales outcomes.'
           },
           skills: [
             'Content Strategy',
             'Research',
+            'B2B Content Marketing',
             'Long-form Writing'
           ],
           body: `
-            <h2>Overview</h2>
-            <p>Discovery conversations determine whether sales opportunities progress or stall.</p>
-        
-            <h2>Key Questions</h2>
+            <h2>Approach</h2>
+            <p>I created an educational sales enablement article designed to help sales professionals conduct more effective discovery conversations.</p>
+            <p>Key documentation decisions included:</p>
+            
             <ul>
-              <li>What problem are you solving?</li>
-              <li>Why now?</li>
-              <li>Who owns the decision?</li>
-              <li>What happens if nothing changes?</li>
+                <li>Framing the problem through relatable storytelling to increase engagement.</li>
+                <li>Establishing a discovery-call framework before introducing individual questions.</li>
+                <li>Defining principles for effective sales questioning, including open-ended questioning and rapport building.</li>
+                <li>Organizing the article around five high-impact discovery questions.</li>
+                <li>Including the rationale behind each question rather than simply presenting scripts.</li>
+                <li>Providing follow-up questions to help readers uncover deeper customer insights.</li>
+                <li>Connecting each question to specific sales objectives such as qualification, pain-point discovery, stakeholder identification, and budget assessment.</li>
             </ul>
-        
+            
+            <p>The content was designed to be immediately actionable for sales representatives at different experience levels.</p>
+            
             <h2>Outcome</h2>
-            <p>These questions uncover urgency, business impact, and buying intent.</p>
+            <p>The article helps sales professionals:</p>
+            
+            <ul>
+                <li>Conduct more structured discovery conversations.</li>
+                <li>Uncover customer pain points more effectively.</li>
+                <li>Improve qualification accuracy.</li>
+                <li>Tailor product demonstrations to buyer needs.</li>
+                <li>Build stronger customer relationships during the sales process.</li>
+            </ul>
+            
+            <p>The content transforms discovery calls from generic conversations into a strategic qualification framework that supports higher-quality sales opportunities.</p>
+            <div class="article-link-card">
+              <a href="samples/5-questions-to-ask-on-a-sales-discovery-call.pdf" target="_blank" rel="noopener">
+            <div class="article-link-icon">
+              📄
+            </div>
+            
+            <div class="article-link-content">
+              <h3> 5 Most Critical Questions to Ask on a Sales Discovery Call →</h3>
+            </div>            
+              </a>
+            </div>
           `
         }
     };
